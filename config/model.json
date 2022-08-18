@@ -1,0 +1,31 @@
+{
+  "children": [
+    {
+      "@Microservice.SimpleWebService.Server": {
+        "id": "Web Server",
+        "uuid": "0514df4f-d953-45de-99f1-db981da9a2dc",
+        "portNumber": 18080,
+        "authentication": {
+          "@OpenID": {
+            "realm": "Xentara",
+            "scopes": [ "profile", "email" ],
+            "issuer": "https://example.auth0.com/",
+            "audience": "13218vhgrfghkjhkj9yQCMmBRC1uV7",
+            "claims": {
+              "role": [ "Admin", "XXYYZZ " ],
+              "group": [ "Administrators", "AABBCC" ],
+              "entitlement": [ "Use-Xentara" ],
+              "sub": [ "auth0|58716e0113804c0069b9ig09", "someOtherSub" ]
+            },
+            "verification": {
+              "@JWKS": {
+                "jwksFile": "path//to//auth0.json"
+              }
+            }
+          }
+        },
+        "serverCertificate": "path//to//certificate.pem"
+      }
+    }
+  ]
+}
