@@ -9,8 +9,6 @@
 
 namespace xentara::samples::webService
 {
-//  An HTTP Error with  responce code and complete description
-
 // This class represents HTTP Errors.It includes the response code, message, and, if necessary,additional header
 // information. This class inherits std::runtime error and may be thrown as an exception.
 class HttpError : public std::runtime_error

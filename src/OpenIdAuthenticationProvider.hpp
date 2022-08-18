@@ -24,7 +24,7 @@ namespace xentara::samples::webService
 {
 
 //  This is the derived authentication class for OpenID.
-/// More information about the openID can be found here: https://openid.net/connect/
+// More information about the openID can be found here: https://openid.net/connect/
 class OpenIdAuthenticationProvider final : public AbstractAuthenticationProvider
 {
 public:
@@ -50,12 +50,12 @@ private:
 	auto loadClaims(utils::json::decoder::Object &jsonObject) -> void;
 
 	//  Checks if the string is empty an all the characters on a string in asci table and accepts
-	/// all characters between 0x21 to 0x7F exept 0x22(""") and 0x5C("/")
-	/// @return false if the string meets the criteria
+	// all characters between 0x21 to 0x7F exept 0x22(""") and 0x5C("/")
+	// @return false if the string meets the criteria
 	std::optional<std::string> getScopeError(std::u8string string);
 
 	//  Checks if the characters in the string are the visible characters
-	/// @return false if at least one character is non visible
+	// @return false if at least one character is non visible
 	std::optional<std::string> getRealmError(std::u8string string);
 
 	//  Adds backslash ("\") before quote (""") and backslash ("\")

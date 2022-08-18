@@ -13,7 +13,7 @@
 namespace xentara::samples::webService
 {
 //  The Abstract Class for Token Verification. This class contains all the necessary method which
-/// has to implemented by all the derived token verification classes
+// has to implemented by all the derived token verification classes
 class AbstractTokenVerification
 {
 public:
@@ -21,7 +21,7 @@ public:
 	virtual ~AbstractTokenVerification() = 0;
 
 	//  Load the configurations from JSON Object for verification
-	/// @param jsonObject the object from the json file
+	//  jsonObject the object from the json file
 	virtual auto loadConfig(utils::json::decoder::Object &jsonObject) -> void = 0;
 
 	// Initialize the parameters for the token Verification

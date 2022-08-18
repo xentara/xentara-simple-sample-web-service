@@ -466,7 +466,7 @@ auto OpenIdAuthenticationProvider::checkJwt(const std::string &encodedToken) -> 
 	auto token = decodeJwt(encodedToken);
 
 	// Check the not before and expiration Time
-	//checkDate(token); //TODO: uncomment the checkData()
+	checkDate(token); 
 	
 	// Check if the audience is found and if it matches with the servers
 	checkAudience(token);

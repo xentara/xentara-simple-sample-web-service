@@ -13,7 +13,7 @@ namespace xentara::samples::webService
 class Environment;
 
 //  This is the service provider class. It registers all the elements the service provider provides,
-/// and creates the runtime environment.
+// and creates the runtime environment.
 class ServiceProvider : public process::ServiceProvider
 {
 public:

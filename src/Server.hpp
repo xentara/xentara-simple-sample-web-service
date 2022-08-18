@@ -21,7 +21,7 @@
 namespace xentara::samples::webService
 {
 
-// A class representing a web server for exchaning .
+// A class representing a web server for exchaning data.
 class Server final : public process::Microservice
 {
 public:
@@ -86,11 +86,11 @@ private:
 	auto beginRequestHandler(lh_con_t *connection) -> int;
 
 	//  Statis version of logMessageHandler
-	/// Uses context's user data as the server to call logMessageHandler()
+	// Uses context's user data as the server to call logMessageHandler()
 	static auto staticLogMessageHandler(lh_ctx_t *context, const lh_con_t *connection, const char *message) -> int;
 
 	//  Statis version of beginRequestHandler
-	/// Uses context's user data as the server to call beginRequestHandler()
+	// Uses context's user data as the server to call beginRequestHandler()
 	static auto staticBeginRequestHandler(lh_ctx_t *context, lh_con_t *connection) -> int;
 
 	//  The portNumber of the Server
@@ -102,7 +102,7 @@ private:
 	//  Server Certificate for the Server
 	std::filesystem::path _serverCertificatePath;
 
-	//  contex
+	//  context
 	lh_ctx_t *_context { nullptr };
 };
 } // namespace xentara::samples::webService
